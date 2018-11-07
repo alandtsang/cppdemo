@@ -12,7 +12,7 @@ SET(CMAKE_CXX_FLAGS "-g -Wall -Wextra -ffunction-sections -O3 -msse4.2")
 
 add_definitions(--std=c++11)
 
-AUX_SOURCE_DIRECTORY(./src APP_SRC)                        
+AUX_SOURCE_DIRECTORY(./src APP_SRC)
 
 add_executable(mybox ${APP_SRC})
 
