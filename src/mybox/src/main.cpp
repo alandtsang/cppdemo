@@ -2,6 +2,7 @@
 
 #include "file.h"
 #include "encrypt.h"
+#include "utils.h"
 
 int main() {
   // File
@@ -13,7 +14,7 @@ int main() {
   std::string msg = "hello world";
   WriteFile(path, msg);
   std::string newMsg = ReadFile(path);
-  std::cout << "new message = " << newMsg << "\n";
+  std::cout << "new message = " << newMsg << "\n\n";
 
   // Encrypt
   msg = "hello boy, your age is 18";
@@ -21,5 +22,11 @@ int main() {
   std::string encryptStr = Encrypt(msg, key);
   std::cout << "encrypt string = " << encryptStr << "\n";
   newMsg = Decrypt(encryptStr, key);
-  std::cout << "decrypt message = " << newMsg << "\n";
+  std::cout << "decrypt message = " << newMsg << "\n\n";
+
+  // Random
+  int num = GetRandomNum(20);
+  std::cout << "random [0, 20) = " << num << "\n";
+  num = GetRandomNum(20, 5);
+  std::cout << "random [5, 20) = " << num << "\n\n";
 }
