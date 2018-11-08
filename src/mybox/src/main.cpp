@@ -3,6 +3,7 @@
 #include "file.h"
 #include "encrypt.h"
 #include "utils.h"
+#include "base64.h"
 
 int main() {
   // File
@@ -29,4 +30,11 @@ int main() {
   std::cout << "random [0, 20) = " << num << "\n";
   num = GetRandomNum(20, 5);
   std::cout << "random [5, 20) = " << num << "\n\n";
+
+  // Base64
+  std::string s = "any + old & data";
+  msg = base64_encode(s.c_str(), s.length());
+  std::cout << msg << "\n";
+  newMsg = base64_decode(msg);
+  std::cout << newMsg << "\n\n";
 }

@@ -1,7 +1,16 @@
 # Mybox
 Some common code
 
-# Usage
+## Feature
+- Encode
+    - EncryptXor
+    - Base64
+- File
+    - CheckDirOrFileExist
+- Utils
+    - Random
+
+## Usage
 ```
 $ cd mybox
 $ mkdir build && cd build
