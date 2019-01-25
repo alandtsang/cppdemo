@@ -4,6 +4,7 @@
 #include "encrypt.h"
 #include "utils.h"
 #include "base64.h"
+#include "split.h"
 
 int main() {
   // File
@@ -37,4 +38,11 @@ int main() {
   std::cout << msg << "\n";
   newMsg = base64_decode(msg);
   std::cout << newMsg << "\n\n";
+
+  // Split
+  s = "This is test of c++ string split with delimiter";
+  std::vector<std::string> results = Split(s, ' ');
+  for (auto &i : results)
+    std::cout << i << " ";
+  std::cout << "\n";
 }
