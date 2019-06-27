@@ -6,10 +6,11 @@ cmake with Google protobuf v3 version examples.
 ```
 $ cd cmake-protobuf
 $ ./compile.sh
-$ cd build
 ```
 
 ## Usage
+```
+$ cd build
 $ ./cmake_protobuf 
 ```
 Output is:
@@ -17,5 +18,8 @@ Output is:
 Alan is 18 years old. 
 His favorite book is Effective C++, and it costs 51.8￥.
 ```
+
+## Reference
+https://cmake.org/cmake/help/v3.10/module/FindProtobuf.html
 
 
